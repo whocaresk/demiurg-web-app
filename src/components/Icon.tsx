@@ -26,6 +26,9 @@ const getEmoji = (type: CellType): string => {
       return '💥';
     case CellType.LIFE:
       return '🐣';
+
+    default:
+      throw new Error('Родился ксеноморф, все по спасательным капсулам!');
   }
 };
 
@@ -43,6 +46,9 @@ const getBackgroundCss = (type: CellType): ReturnType<typeof css> => {
       return css`
         background: linear-gradient(rgb(176, 7, 252), rgb(252, 173, 231));
       `;
+
+    default:
+      throw new Error('Родился ксеноморф, все по спасательным капсулам!');
   }
 };
 
